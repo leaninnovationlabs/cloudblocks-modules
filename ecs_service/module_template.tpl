@@ -13,7 +13,14 @@ module "ecs-fargate-service" {
     app_port_mappings = $APP_PORT_MAPPINGS
     env_variables     = $ENV_VARIABLES
     log_group_name    = $LOG_GROUP_NAME
+    log_router_name   = $LOG_ROUTER_NAME
+    fluent_bit_image  = $FLUENT_BIT_IMAGE
+    log_delivery_stream = $LOG_DELIVERY_STREAM
     log_stream_prefix = $LOG_STREAM_PREFIX
+    mount_points      = $MOUNT_POINTS
+    volume_name       = $VOLUME_NAME
+    efs_vol_config    = $EFS_VOL_CONFIG
+    efs_security_group = $EFS_SECURITY_GROUP
     task_def_tags     = $TASK_DEF_TAGS
     target_group_name    = $TARGET_GROUP_NAME
     tg_health_check_path = $TG_HEALTH_CHECK_PATH
